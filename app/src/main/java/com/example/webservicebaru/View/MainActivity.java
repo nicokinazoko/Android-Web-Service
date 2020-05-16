@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         beritaViewModel.setAllBerita();
         beritaViewModel.getAllBerita().observe(this, getAllBerita);
 
+        recyclerViewBerita.setAdapter(beritaAdapter);
+
         beritaAdapter.setOnItemCallback(new BeritaAdapter.OnItemCallback() {
             @Override
             public void onItemClicked(BeritaDiscoverArticlesItem beritaDiscoverArticlesItem) {
