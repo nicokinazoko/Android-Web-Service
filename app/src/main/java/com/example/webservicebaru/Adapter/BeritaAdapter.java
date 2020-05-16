@@ -56,9 +56,9 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
                 .get(position).getUrlToImage())
                 .into(holder.imageViewBerita);
 
-        holder.textViewJudul.setText(beritaArticlesItems.get(position).getTitle().toString());
+        holder.textViewJudul.setText(beritaArticlesItems.get(position).getTitle());
 
-        holder.textViewPenulis.setText(beritaArticlesItems.get(position).getAuthor().toString());
+        holder.textViewPenulis.setText(beritaArticlesItems.get(position).getAuthor());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +70,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return beritaArticlesItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
